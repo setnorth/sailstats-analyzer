@@ -70,7 +70,7 @@
 	//For debugging purposes
 	/*onMount(
 		() => 	{
-				sFileHandle.setName("/Users/thorsten/Projects/Programming/testdata/reader2_output_002.csv");
+				sFileHandle.setName("../example/example.csv");
 				readFile();
 				}
 	);*/
