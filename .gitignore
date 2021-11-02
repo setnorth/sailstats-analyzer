@@ -1,0 +1,8 @@
+/node_modules/
+/public/build/
+/misc/
+.DS_Store
+src-tauri/Cargo.lock
+/.vscode/
+/attribution/
+src-tauri/about.toml
