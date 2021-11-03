@@ -13,7 +13,7 @@
         <p class="programTitle">SailStats Viewer v0.1.0</p>
         <p>Copyright &copy; 2021 Thorsten Ernst Schilling &lt;<a href="thorsten.schilling@gmail.com" target="_blank">thorsten.schilling@gmail.com</a>&gt;</p>
         <p>Built with Svelte, Rust &amp; Tauri in the hope that it is useful to others.</p>
-        <p>For more information see: </p>
+        <p>For more information see: <a href="https://github.com/setnorth/sailstats-analyzer" target=_blank>https://github.com/setnorth/sailstats-analyzer</a></p>
         <p><b>License:</b>
             <pre class="license">
                 <License/>
