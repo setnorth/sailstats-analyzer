@@ -5,6 +5,5 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
     steps:
       - uses: loloof64/tauri-action@marketplace_2
