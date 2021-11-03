@@ -3,11 +3,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  publish-tauri:
     strategy:
       fail-fast: false
       matrix:
-        platform: [ubuntu-latest, macos-latest, windows-latest]
+        platform: [macos-latest] #, ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -15,7 +15,7 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v1
       with:
-        node-version: 14
+        node-version: 12
     - name: install Rust stable
       uses: actions-rs/toolchain@v1
       with:
@@ -25,27 +25,14 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y webkit2gtk-4.0
-    - name: install example dependencies
-      run: yarn
-      working-directory: ./packages/action/__fixtures__/example
-    - uses: ./
+    - name: install app dependencies and build it
+      run: yarn && yarn build
+    - uses: tauri-apps/tauri-action@v0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with: 
-        projectPath: ./packages/action/__fixtures__/example
-        iconPath: ./icon.png
-        tagName: example-v__VERSION__
-        releaseName: "Release example app v__VERSION__"
-        releaseBody: "See the assets to download this version and install."
-        releaseDraft: true
-        prerelease: false
-    - uses: ./
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with: 
-        projectPath: ./packages/action/__fixtures__/example-with-tauri
-        tagName: example-with-tauri-v__VERSION__
-        releaseName: "Release example with preconfigured Tauri app v__VERSION__"
+      with:
+        tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
+        releaseName: "App v__VERSION__"
         releaseBody: "See the assets to download this version and install."
         releaseDraft: true
         prerelease: false
