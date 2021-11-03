@@ -1,4 +1,4 @@
-- name: tauri-action
+name: tauri-action
   # You may pin to the exact commit or the version.
   # uses: loloof64/tauri-action@639795e2ce6324ac70f68fe208f9f04f6121ee49
   uses: loloof64/tauri-action@marketplace_2
