@@ -1,6 +1,6 @@
 {
   "name": "sailstats-analyzer",
-  "version": "0.1.0a",
+  "version": "0.1.0",
   "private": false,
   "license": "AGPL-3.0-or-later",
   "scripts": {
