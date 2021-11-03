@@ -1,6 +1,6 @@
 [package]
 name = "sailstats-analyzer"
-version = "0.1.0"
+version = "0.1.0-alpha"
 description = "An analyzer for sailing statistics"
 authors = ["Thorsten Ernst Schilling"]
 license = "AGPL-3.0"
