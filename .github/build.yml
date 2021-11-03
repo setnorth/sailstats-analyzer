@@ -1,0 +1,10 @@
+name: build-binaries
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: loloof64/tauri-action@marketplace_2
