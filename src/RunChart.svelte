@@ -78,7 +78,7 @@
 			x: {     					        
 				type: 'time',
 				time: {
-					parser: (x) => moment(x, "HH:mm:ss.SSS"),
+					parser: (x) => moment(x, "YYYY-MM-DD HH:mm:ss.SSS"),
 					displayFormats: {
 						day: 'HH:mm:ss',
 						hour: 'HH:mm:ss',
